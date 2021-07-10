@@ -24,14 +24,12 @@ public class Orientation implements SensorEventListener {
   private static final int SENSOR_DELAY_MICROS = 8 * 1000; // 8ms
 
   private final WindowManager mWindowManager;
-
   private final SensorManager mSensorManager;
-
-  @Nullable
-  private final Sensor mRotationSensor;
 
   private int mLastAccuracy;
   private Listener mListener;
+  @Nullable
+  private final Sensor mRotationSensor;
 
   @Inject
   public Orientation(@ApplicationContext Context context) {
